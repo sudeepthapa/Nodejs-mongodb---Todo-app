@@ -12,7 +12,9 @@ $(document).ready(function(){
         success: function(data){
           //do something with the data via front-end framework
           location.reload();
-        }
+        },
+        error:function(err){
+        } 
       });
 
       return false;
@@ -27,6 +29,9 @@ $(document).ready(function(){
         success: function(data){
           //do something with the data via front-end framework
           location.reload();
+        },
+        error:function(err){
+
         }
       });
   });

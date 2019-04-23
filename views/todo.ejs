@@ -6,22 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TODO List</title>
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="/assets/todo-list.js"></script>
     <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
     <div id="todo-table">
         <h1>My Todo List</h1>
-        <form action="/todo">
+        <form>
             <input type="text" name="item" placeholder="Add new item ..." required>
             <button type="submit">Add Item</button>
         </form>
         <ul>
-            <li>item1</li>
-            <li>item2</li>
-            <li>item3</li>
-            <li>item4</li>
-            <li>item5</li>
-            <li>item6</li>
+            <% for(var i=0; i < todos.length;i++){ %>
+                <li><%= todos[i].item %></li>
+           <% } %>
         </ul>
     </div>
 </body>
